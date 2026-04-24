@@ -36,17 +36,14 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-    };
-/ {
-    combos {
-        compatible = "zmk,combos";
 
-       combo_undo {
-                timeout-ms = <50>;
-                key-positions = <20 21>;
-                bindings = <&kp LC(Z)>;
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LC(Z)>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 

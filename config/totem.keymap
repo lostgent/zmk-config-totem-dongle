@@ -35,13 +35,18 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        combo_undo {
+        };
+    };
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+       combo_undo {
                 timeout-ms = <50>;
                 key-positions = <20 21>;
                 bindings = <&kp LC(Z)>;
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 

@@ -133,7 +133,7 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &kp       &kp      &kp PRCNT  &kp LBKT       &kp RBKT   &kp AMPS  &kp ASTRIK &kp CARET &kp TILDE       
+                &trans      &tran     &trans   &kp PRCNT  &kp LBKT       &kp RBKT   &kp AMPS  &kp ASTRIK &kp CARET &kp TILDE       
                 &kp EXCL    &kp AT    &kp HASH &kp DLLR   &kp LPAR       &kp RPAR   &kp MINUS &kp EQUAL  &kp BSLH  &kp GRAVE 
     &trans      &trans      &trans    &trans   &trans     &kp LBRC       &kp RBRC   &kp UNDER &kp PLUS   &kp PIPE  &trans    &trans         
                                       &trans   &trans     &trans         &trans      &trans   &mo ADJ      

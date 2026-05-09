@@ -50,20 +50,15 @@
             key-positions = <21 22>;
             bindings = <&kp LC(Z)>;
         };
-    };
-
-    /* ===================== MACROS ===================== */
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&macro_press   &kp LSHFT>,
-                <&macro_tap     &kp N2>,
-                <&macro_release &kp LSHFT>,
-                <&macro_tap     &kp G &kp I &kp F>;
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LC(C)>;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            bindings = <&kp LC(V)>;
         };
     };
 
@@ -161,7 +156,7 @@ label= "SYM"                               ;
 
                 &trans      &trans    &trans   &kp PRCNT  &kp LBKT       &kp RBKT   &kp AMPS  &kp ASTRIK &kp CARET &kp TILDE       
                 &kp EXCL    &kp AT    &kp HASH &kp DLLR   &kp LPAR       &kp RPAR   &kp MINUS &kp EQUAL  &kp BSLH  &kp GRAVE 
-    &trans      &trans      &trans    &trans   &trans     &kp LBRC       &kp RBRC   &kp UNDER &kp PLUS   &kp PIPE  &trans    &trans         
+    &trans      &trans      &trans    &trans   &trans     &kp LBRC       &kp RBRC   &kp UNDER &kp PLUS   &kp PIPE  &kp NUBS    &trans         
                                       &trans   &trans     &trans         &trans     &mo ADJ  &trans      
                         >;
                 };
@@ -185,9 +180,9 @@ label= "ADJ"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &sys_reset  &trans      &trans      &trans      &bt BT_SEL 0      &kp C_MUTE     &kp F7      &kp F8      &kp F9      &sys_reset
-                &bootloader &trans      &trans      &trans      &bt BT_SEL 1      &kp C_VOL_UP   &kp F4      &kp F5      &kp F6      &bootloader  
-    &trans      &trans      &trans      &bt BT_CLR  &trans      &bt BT_SEL 2      &kp C_VOL_DN   &kp F1      &kp F2      &kp F3      &kp F10     &trans         
+                &sys_reset  &trans      &trans      &trans      &trans      &kp C_MUTE     &kp F7      &kp F8      &kp F9      &sys_reset
+                &bootloader &trans      &trans      &trans      &trans      &kp C_VOL_UP   &kp F4      &kp F5      &kp F6      &bootloader  
+    &trans      &trans      &trans      &trans  &trans      &trans      &kp C_VOL_DN   &kp F1      &kp F2      &kp F3      &kp F10     &trans         
                                         &trans      &trans      &trans            &trans         &trans      &trans      
                         >;
                 };

@@ -90,9 +90,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-                &kp Q         &kp W         &kp F         &kp P         &kp B           &kp J         &kp L         &kp U         &kp Y         &kp SQT
-                &hs LSHIFT A  &hm LALT R    &hm LCTRL S   &hm LGUI T    &kp G           &kp M         &hm RGUI N    &hm RCTRL E   &hm RALT I    &hs RSHIFT O
-    &kp LSHFT     &kp Z         &kp X         &kp C       &kp D         &kp V           &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
+                &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y         &kp U         &kp I         &kp O         &kp P
+                &hs LSHIFT A  &hm LALT S    &hm LCTRL D   &hm LGUI F    &kp G           &kp H         &hm RGUI J    &hm RCTRL K   &hm RALT L    &hs RSHIFT SQT
+    &kp LSHFT     &kp Z         &kp X         &kp C       &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
                                           &kp DEL     &lt SYM TAB       &kp SPACE       &kp RET       &lt NAV BSPC      &kp C_MUTE
             >;
         };

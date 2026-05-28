@@ -60,6 +60,11 @@
             key-positions = <23 24>;
             bindings = <&kp LC(V)>;
         };
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <22 24>;
+            bindings = <&kp LC(X)>;
+        };
     };
 
     /* ===================== BEHAVIORS ===================== */
@@ -105,7 +110,7 @@ label= "BASE"                              ;
                 &kp Q        &kp W       &kp F       &kp P      &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SQT
                 &hs LSHIFT A &hm LALT R  &hm LCRTL S &hm LGUI T  &kp G           &kp M       &hm RGUI N  &hm RCTRL E &hm RALT I  &hs RSHIFT O
     &kp SHIFT   &kp Z        &kp X       &kp C       &kp D       &kp V           &kp K      &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp SHIFT
-                                         &kp DEL &lt SYM TAB     &kp SPACE       &kp RET     &lt NAV BSPC    &kp C_MUTE
+                                         &kp DEL &lt SYM TAB     &kp SPACE       &kp RET     &lt NAV BSPC    &lt ADJ C_MUTE
                         >;
                 };
 
@@ -131,7 +136,7 @@ label= "NAVI"                              ;
                 &kp INSERT  &kp N1  &kp N2    &kp N3   &kp KP_MINUS    &kp HOME    &kp PG_UP   &kp UP      &kp PG_DN   &kp COLON
                 &kp DELETE  &kp N4  &kp N5    &kp N6   &kp KP_PLUS     &kp END     &kp LEFT    &kp DOWN    &kp RIGHT   &kp SEMI
     &trans      &caps_word  &kp N7  &kp N8    &kp N9   &kp N0       &trans      &trans      &trans      &trans      &trans     &trans      
-                                       &trans      &mo ADJ      &kp ESC         &trans      &trans      &trans      
+                                       &trans      &trans      &kp ESC         &trans      &trans      &trans      
                         >;
                 };
 
@@ -157,7 +162,7 @@ label= "SYM"                               ;
                 &trans      &trans    &trans   &kp PRCNT  &kp LBKT       &kp RBKT   &kp AMPS  &kp ASTRIK &kp CARET &kp TILDE       
                 &kp EXCL    &kp AT    &kp HASH &kp DLLR   &kp LPAR       &kp RPAR   &kp MINUS &kp EQUAL  &kp BSLH  &kp GRAVE 
     &trans      &trans      &trans    &trans   &trans     &kp LBRC       &kp RBRC   &kp UNDER &kp PLUS   &kp PIPE  &kp NUBS    &trans         
-                                      &trans   &trans     &trans         &trans     &mo ADJ  &trans      
+                                      &trans   &trans     &trans         &trans     &trans  &trans      
                         >;
                 };
 

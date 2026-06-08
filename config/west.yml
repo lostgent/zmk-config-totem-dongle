@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: v0.22.3
       import: app/west.yml
     - name: zmk-hid-trackball-interface
       remote: englmaxi

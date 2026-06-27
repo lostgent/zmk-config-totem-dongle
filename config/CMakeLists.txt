@@ -1,0 +1,6 @@
+if ((NOT CONFIG_ZMK_SPLIT) OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+  if (CONFIG_ZMK_HID_INDICATORS)
+    zephyr_library()
+    zephyr_library_sources(${CMAKE_CURRENT_SOURCE_DIR}/src/hid-trackball-interface-patched.c)
+  endif()
+endif()

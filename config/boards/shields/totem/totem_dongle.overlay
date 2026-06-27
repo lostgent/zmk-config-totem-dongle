@@ -43,7 +43,3 @@
     };
 };
 
-&hid_trackball_interface {
-    automouse-layer = <4>;
-    automouse-layer-timeout-ms = <600>;
-};

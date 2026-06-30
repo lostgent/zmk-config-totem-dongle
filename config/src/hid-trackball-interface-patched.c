@@ -17,6 +17,7 @@
 #include <zmk/behavior_queue.h>
 #include <zmk/events/hid_indicators_changed.h>
 #include <zmk/events/layer_state_changed.h>
+#include <zmk/events/position_state_changed.h>
 #include <zmk/keymap.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
@@ -68,7 +69,15 @@ static void toggle_scroll() {
     struct zmk_behavior_binding binding = {
         .behavior_dev = DEVICE_DT_NAME(DT_PHANDLE(DT_DRV_INST(0), tog_scroll_bindings)),
     };
-    zmk_behavior_queue_add(-1, binding, true, 0);
+    struct zmk_behavior_binding_event event = {
+        .layer = -1,
+        .position = (uint32_t)-1,
+        .timestamp = k_uptime_get(),
+#if IS_ENABLED(CONFIG_ZMK_SPLIT)
+        .source = ZMK_POSITION_STATE_CHANGE_SOURCE_LOCAL,
+#endif
+    };
+    zmk_behavior_queue_add(&event, binding, true, 0);
     LOG_INF("scroll toggled");
 }
 
@@ -76,7 +85,15 @@ static void cycle_dpi() {
     struct zmk_behavior_binding binding = {
         .behavior_dev = DEVICE_DT_NAME(DT_PHANDLE(DT_DRV_INST(0), cyc_dpi_bindings)),
     };
-    zmk_behavior_queue_add(-1, binding, true, 0);
+    struct zmk_behavior_binding_event event = {
+        .layer = -1,
+        .position = (uint32_t)-1,
+        .timestamp = k_uptime_get(),
+#if IS_ENABLED(CONFIG_ZMK_SPLIT)
+        .source = ZMK_POSITION_STATE_CHANGE_SOURCE_LOCAL,
+#endif
+    };
+    zmk_behavior_queue_add(&event, binding, true, 0);
     LOG_INF("cycle dpi");
 }
 

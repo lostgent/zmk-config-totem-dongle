@@ -1,0 +1,19 @@
+[Unit]
+Description=Ploopy Nano -> ZMK dongle Scroll Lock bridge (Wayland automouse)
+Documentation=https://github.com/lostgent/zmk-config-totem-dongle/tree/main/host-tools/wayland-scrolllock-bridge
+After=multi-user.target
+
+[Service]
+Type=simple
+# Adjust the path if you install the script somewhere else.
+ExecStart=/usr/bin/python3 /opt/ploopy-dongle-bridge/ploopy-dongle-bridge.py
+Restart=always
+RestartSec=2
+# Optional overrides:
+# Environment=IDLE_TIMEOUT=0.25
+# Environment=VERBOSE=1
+# Environment=PLOOPY_NAME=PloopyCo Trackball Nano
+# Environment=DONGLE_NAME=ZMK Project TOTEM Keyboard
+
+[Install]
+WantedBy=multi-user.target
